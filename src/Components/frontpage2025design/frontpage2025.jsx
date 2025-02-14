@@ -38,6 +38,21 @@ const FrontPage2025 = ({ onScaleComplete }) => {
       return window.innerWidth <= 768 ? 1000 : 2000;
     };
 
+    // Setup blinking letters effect
+    const letters = document.querySelectorAll(".tagline-letter25");
+    const addBlinkingEffect = debounce(() => {
+      letters.forEach((letter) => {
+        const shouldBlink = Math.random() > 0.6;
+        if (shouldBlink) {
+          letter.classList.add("blinking25");
+        } else {
+          letter.classList.remove("blinking25");
+        }
+      });
+    }, 250);
+
+    const blinkingInterval = setInterval(addBlinkingEffect, 3000);
+
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
@@ -80,7 +95,7 @@ const FrontPage2025 = ({ onScaleComplete }) => {
     // Continue with normal animation sequence
     timeline.to(
       yearRef.current.querySelector(".zero"),
-      { opacity: 1, duration: 0.5, ease: "power2.out" },
+      { opacity: 0.6, duration: 0.5, ease: "power2.out" },
       "-=0.5"
     );
 
@@ -163,6 +178,7 @@ const FrontPage2025 = ({ onScaleComplete }) => {
     
     return () => {
       window.removeEventListener("resize", handleResize);
+      clearInterval(blinkingInterval);
       timeline.kill();
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
