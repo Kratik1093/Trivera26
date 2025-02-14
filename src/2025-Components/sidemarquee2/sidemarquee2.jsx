@@ -38,7 +38,7 @@ const SideMarquee = (props) => {
     console.log(document.documentElement.offsetHeight);
     return ( 
     <div style={{
-        height: isRight ? `90dvh`: '6000px',
+        height: isRight ? `500dvh`: '6000px',
         // height: `${pageHeight}px`,
       }}
     className={` w-7 SideMarqueeContainer  overflow-y-clip invisible md:visible ${isRight? 'right-2 absolute top-0' : 'left-10 absolute'} z-50 border-l-[1px] border-l-slate-200`}>

@@ -142,7 +142,7 @@
   position: absolute;
   top: 90%;
   left: 0;
-  right: 0;
+  right: 45px;
   height: 2px;
   background: white;
   z-index: 1;
@@ -272,6 +272,7 @@
   }
   .year-container25 {
     left: 51%;
+    top: 50%;
   }
 }
 
@@ -284,7 +285,7 @@
     left: -35px;
   }
   .month {
-    font-size: 2rem;
+    font-size: 1.9rem;
     letter-spacing: 0.1rem;
     line-height: 1.6;
   }
@@ -292,7 +293,7 @@
     font-size: 5rem;
   }
   .full-year {
-    font-size: 2rem;
+    font-size: 1.9rem;
     letter-spacing: 0.6rem;
     line-height: 2.5;
     top: 15px; /* Adjusted for smallest screens */
