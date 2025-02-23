@@ -257,27 +257,27 @@ const Navbar = () => {
           {menu === "contact" ? <hr /> : <></>}
         </li>
         <li
-        onClick={() => handleMenuItemClick("guideline")}
+        onClick={() => handleMenuItemClick("guidelines")}
           style={{
-            color: menu === "guideline" ? "#eb0028" : navTextColor,
+            color: menu === "guidelines" ? "#eb0028" : navTextColor,
             transition: "0.5s ease-out",
           }}
         >
           <Link
             style={{
               textDecoration: "none",
-              color: menu === "guideline" ? "#eb0028" : navTextColor,
+              color: menu === "guidelines" ? "#eb0028" : navTextColor,
               transition: "1s ease-out",
             }}
             to="/guideline"
           >
             <span
               style={{
-                color: menu === "guideline" ? "#eb0028" : "",
+                color: menu === "guidelines" ? "#eb0028" : "",
                 transition: "0.5s ease-out",
               }}
             >
-              Guideline
+              Guidelines
             </span>
           </Link>{" "}
           {menu === "guideline" ? <hr /> : <></>}{" "}
