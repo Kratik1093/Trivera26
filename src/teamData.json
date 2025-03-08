@@ -638,6 +638,30 @@
                 "anger":10,
                 "fun": 76,
                 "ln":"https://www.linkedin.com/in/chandra-kumar-rajwal-31774622a/"
+            },{
+                "id": "Web-Dev-Team",
+                "name": "Sahil",
+                "info": "TEDxDAVV ",
+                "image": "https://imgur.com/UFrsMGb.jpeg",
+                "ig": "https://www.instagram.com/sahilkukreja_30?igsh=cWhxaWp0NmJrdW45",
+                "cuteness":95,
+                "IQ":80,
+                "humour":50,
+                "anger":10,
+                "fun": 86,
+                "ln":"https://www.linkedin.com/in/sahil-kukreja-943993289/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            },{
+                "id": "Web-Dev-Team",
+                "name": "Radha",
+                "info": "TEDxDAVV ",
+                "image": "https://imgur.com/dBcYe0k.jpeg",
+                "ig": "https://www.instagram.com/radha_c22/profilecard/?igsh=bTg0em44amdrNWFl",
+                "cuteness":65,
+                "IQ":80,
+                "humour":40,
+                "anger":80,
+                "fun": 86,
+                "ln":"https://www.linkedin.com/in/radha-chouhan-934664260"
             }
         ],
         "PRODUCTION": [
@@ -800,8 +824,8 @@
                 "ig": "https://www.instagram.com/anandsrizz?igsh=YjI0N3p0OHh4eXg5",
                 "cuteness":70,
                 "IQ":80,
-                "humour":20,
-                "anger":90,
+                "humour":80,
+                "anger":30,
                 "fun": 46,
                 "ln":"https://www.linkedin.com/in/anand-mridul-mishra-166851311?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
             },{
@@ -1010,6 +1034,19 @@
                 "info": "TEDxDAVV",
                 "image": "https://imgur.com/uQeXMCY.jpeg",
                 "ig": "https://www.instagram.com/swapnil.khare5?igsh=MXFwcDByYm43N2FiZg==",
+                "cuteness":60,
+                "IQ":80,
+                "humour":20,
+                "anger":90,
+                "fun": 46,
+                "ln":""
+            },
+            {
+                "id": "sponsorship",
+                "name": "Saharsh",
+                "info": "TEDxDAVV",
+                "image": "https://imgur.com/WLyJd8C.jpeg",
+                "ig": "",
                 "cuteness":60,
                 "IQ":80,
                 "humour":20,
