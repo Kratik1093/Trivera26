@@ -57,7 +57,7 @@
   display: inline-grid;
   flex-direction: column; /* Stack elements vertically */
   align-items: center; /* Center-align text */
-  gap: 2rem; /* Add spacing between lines */
+  gap: 0.5rem; /* Add spacing between lines */
 }
 
 .text25 {
@@ -287,6 +287,9 @@
   .columns-container25 {
     gap: 2%;
     padding: 10px;
+  }
+  .combined-column25{
+    gap: 2rem;
   }
   .year-container25{
     top:55%

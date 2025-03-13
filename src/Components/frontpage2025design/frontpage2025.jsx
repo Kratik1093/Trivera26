@@ -28,6 +28,8 @@ const FrontPage2025 = ({ onScaleComplete }) => {
   const taglineRef = useRef();
   const lineOverlayRef = useRef();
   const zeroRef = useRef();
+  const culturalRef = useRef();
+  const speakersRef = useRef();
   const [visibleTexts, setVisibleTexts] = useState([false, false, false, false]);
 
   useEffect(() => {
@@ -77,7 +79,7 @@ const FrontPage2025 = ({ onScaleComplete }) => {
       { scale: 1, opacity: 1, duration: 1.5, ease: "power2.out" }
     );
 
-    // Animate year container first (without the "11")
+    // Animate year container first (without the "11", cultural, and speakers)
     timeline.fromTo(
       yearRef.current,
       { scale: 0.5, opacity: 0 },
@@ -85,12 +87,14 @@ const FrontPage2025 = ({ onScaleComplete }) => {
       "<"
     );
 
-    // Hide "11" initially
+    // Hide "zero", cultural, and speakers containers initially
     gsap.set(yearRef.current.querySelector(".zero"), { opacity: 0 });
+    gsap.set(culturalRef.current, { opacity: 0 });
+    gsap.set(speakersRef.current, { opacity: 0 });
     
-    // Animate "11" separately
+    // Animate "zero", cultural, and speakers containers together
     timeline.to(
-      yearRef.current.querySelector(".zero"),
+      [yearRef.current.querySelector(".zero"), culturalRef.current, speakersRef.current],
       { opacity: 1, duration: 0.5, ease: "power2.out" },
       "+=0.5"
     );
@@ -188,7 +192,7 @@ const FrontPage2025 = ({ onScaleComplete }) => {
         <div ref={lineOverlayRef} className="line-overlay25"></div>
         <div className="year-container25">
           <span ref={yearRef} className="year25">
-            <div className="cultural-container">
+            <div ref={culturalRef} className="cultural-container">
               <Cultural />
             </div>
             <p className="month">MARCH</p>
@@ -196,7 +200,7 @@ const FrontPage2025 = ({ onScaleComplete }) => {
               <NumberSvg />
             </span>
             <span className="full-year">2025</span>
-            <div className="speakers-container">
+            <div ref={speakersRef} className="speakers-container">
               <SPEAKERS/>
             </div>
           </span>
