@@ -12,6 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 function SponsorMobileSection() {
     const [selectedYear, setSelectedYear] = useState('2025');
 
+    // testing
 useEffect(() => {
     let tl2 = gsap.timeline();
     tl2.fromTo('.word', {
