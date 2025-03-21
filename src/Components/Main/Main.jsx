@@ -8,6 +8,7 @@ import About from '../../2025-Components/About/About';
 import Speakersm from '../Speakers-mobile/Speakersm';
 import SliderComponent from '../Stry/SliderComponent';
 import VideoSection from '../../2025-Components/Video Section/VideoSection';
+import TiicketPopup from '../../2025-Components/Ticket Pop-up/TiicketPopup';
 
 const Main = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 968);
@@ -31,6 +32,7 @@ const Main = () => {
 
   return (
     <div>
+      <TiicketPopup />
       <Landing_page />
       <FrontPage2025 />
       <About />
