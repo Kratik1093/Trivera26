@@ -60,6 +60,17 @@ const speakers2025 = [
     linkedinLink: "https://www.linkedin.com/in/dandotiyarajesh/?originalSubdomain=in",
   },
   {
+    name: "Renuka Pundrik",
+    surname: "Goswami",
+    designation: "Co-founder & Spiritual Mentor, Nimai Pathshala",
+    description:
+      "Renuka Pundrik Goswami is the co-founder of Nimai Pathshala, dedicated to promoting dharmic values among youth. She actively advocates for spiritual growth, ethical living, and social transformation",
+    image: "https://imgur.com/0bfe6lJ.png",
+    linkedinLink: "https://www.instagram.com/renuka.goswami.108/?hl=en",
+    instagramLink: "",
+    
+  },
+  {
     name: "Coming",
     surname: "Soon",
     designation: "TEDxDAVV: Where Ideas Come Alive",
@@ -539,6 +550,9 @@ const Speakersm = () => {
                   break;
                 case "Rajesh":
                   speakerClass = "mRajesh";
+                  break;
+                case "Renuka Pundrik":
+                  speakerClass = "mRenuka";
                   break;
                 default:
                     speakerClass = "";
