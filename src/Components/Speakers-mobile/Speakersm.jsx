@@ -69,17 +69,8 @@ const speakers2025 = [
     linkedinLink: "https://www.instagram.com/renuka.goswami.108/?hl=en",
     instagramLink: "",
     
-  },
-  {
-    name: "Coming",
-    surname: "Soon",
-    designation: "TEDxDAVV: Where Ideas Come Alive",
-    description:
-      "This is just the beginning. We have more incredible speakers to reveal, each bringing fresh ideas and powerful stories. Stay tuned! Big announcements are on the way.",
-    image: coming,
-    instagramLink: "",
-    linkedinLink: "",
-  },
+  }
+  
 ];
 const speakers2024 = [
   {
