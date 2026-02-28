@@ -2,9 +2,9 @@ import gsap from 'gsap';
 import ImageAbout from '../image About/ImageAbout';
 import TypeHeading from '../TypeHeading/TypeHeading';
 import TypePara from '../TypePara/TypePara';
-import image1 from '../../Images/About Section image 1.jpeg';
-import image2 from '../../Images/About Section image 2.jpeg';
-import image3 from '../../Images/About Section image 3.jpeg';
+import image1 from '../../Images/trivera_about 1.jpg' ;
+import image2 from '../../Images/trivera_about 2.jpg';
+import image3 from '../../Images/trivera_about 3.jpg';
 import image4 from '../../Images/About Section image 4.jpeg';
 import './About.css';
 

@@ -16,7 +16,7 @@
    width: 20px;
 }
 .tedx-logo{
-   width: 150px;
+   width: 140px;
 }
 
 .nav-logo p{
@@ -35,7 +35,7 @@
    
 }
 .nav-menu li span:hover{
-   color: #eb0028;
+   color: #a5d761;
    
 }
 .nav-menu li{
@@ -56,7 +56,7 @@
    width: 80%;
    height: 3px;
    border-radius: 10px;
-   background: #eb0028;
+   background: #a5d761;
    animation: wid 2s ;
    transition: wid 1s;
 }
@@ -65,7 +65,7 @@
    width: 0;
    height: 3px;
    border-radius: 10px;
-   background: #eb0028;
+   background: #a5d761;
    transition: wid 1s;
 }
 @keyframes wid {
@@ -91,7 +91,7 @@
        z-index: 200;
    }
   .tedx-logo{
-   width: 150px;
+   width: 120px;
   }
    
    .nav-menu{
@@ -199,7 +199,7 @@
        gap: 1vh;
    }
    .tedx-logo{
-      width: 150px ;
+      width: 90px ;
    }
    .Nav-logo{
        display: flex;
@@ -242,7 +242,7 @@
   overflow: hidden;
 }
 .family_button:hover a span {
-  color: #E62B1E;
+  color: #a5d761;
 }
 
 .family_button::before {
@@ -269,7 +269,7 @@
   left: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, transparent,#E62B1E);
+  background: linear-gradient(90deg, transparent,#a5d761);
   animation: btn-anim1 2s linear infinite; /* Slower speed */
 }
 
@@ -288,7 +288,7 @@
   right: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(180deg, transparent,#E62B1E);
+  background: linear-gradient(180deg, transparent,#a5d761);
   animation: btn-anim2 2s linear infinite; /* Slower speed */
   animation-delay: 0.5s;
 }
@@ -328,7 +328,7 @@
   left: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(360deg, transparent,#E62B1E);
+  background: linear-gradient(360deg, transparent,#a5d761);
   animation: btn-anim4 2s linear infinite; /* Slower speed */
   animation-delay: 1.5s;
 }

@@ -1,5 +1,5 @@
 .sponsor-wrapper{
-    background: #000;
+    background: #2d2884;
     position: relative;
     display: flex;
     height: 100vh;
@@ -15,7 +15,7 @@
 
 .sponsor-heading{
     font-size: 200px;
-    color: #eb0028;
+    color: #a5d761;
     font-family: "Inter", serif;
     font-weight: 900;
     position: fixed;
@@ -31,7 +31,7 @@
 }
 
 .sponsor-wrapper{
-    background: #000;
+    background: #2d2884;
     position: relative;
     display: flex;
     height: 100vh;
@@ -43,7 +43,7 @@
 
 .sponsor-heading{
     font-size: 200px;
-    color: #eb0028;
+    color: #a5d761;
     font-family: "Inter", serif;
     font-weight: 900;
     position: fixed;

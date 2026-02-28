@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Marquee from "react-fast-marquee";
 
 import SponsorData from '../../Sponors.json';
-import galaxy from '../../Images/landing2025_milky.png';
+// import galaxy from '../../Images/landing2025_milky.png';
 gsap.registerPlugin(ScrollTrigger);
 
 function SponsorMobileSection() {
@@ -53,7 +53,7 @@ useEffect(() => {
 
     return (
         <div className='sponsor-wrapper-Mobile' ref={sponsorTriggerRefMobile}>
-            <img loading="lazy" src={galaxy} alt="galaxy" className="galaxy2025" />
+            {/* <img loading="lazy" src={galaxy} alt="galaxy" className="galaxy2025" /> */}
             
             {/* Year Selection Dropdown - Repositioned */}
             <div className="year-selector-container" style={{

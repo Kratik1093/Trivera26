@@ -3,10 +3,10 @@
     src: url('../../2025-Components/Fonts/Protomolecule-Regular.ttf') format('truetype');
 }
 
-.teams-section{
-    background: #000000;
+.teams-section{ 
+    background:  #1e5bfc;
     scroll-behavior: smooth;
-    background-size: 500px;
+    
 }
 
 .teams-section-bg{
@@ -14,9 +14,9 @@
     z-index: 0;
     width: 700px;
     position: fixed;
-    top: -100px;
-    left: -170px;
-    background: url('../../Images/landing2025_milky.png') no-repeat;
+    top: -40px;
+    left: -110px;
+    background: url('../../Images/16.jpg') no-repeat;
     filter: contrast(110%) brightness(100%) saturate(180%);
     background-size: 700px;
 }

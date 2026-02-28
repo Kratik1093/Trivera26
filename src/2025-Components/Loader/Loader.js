@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import Logo from '../../Images/logo-white.png'
+import Logo from '../../Images/trivera-logo.png'
 import './loader.css'
 
 export default function Loader() {
