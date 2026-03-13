@@ -1,8 +1,13 @@
 import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import "./LandingPage.css";
 import { gsap } from "gsap";
 
+const DELAY = 2.5; // global start delay in seconds
+
 export default function LandingPage() {
+  const navigate = useNavigate();
+
   const wrapperRef   = useRef(null);
   const cursorRef    = useRef(null);
   const followerRef  = useRef(null);
@@ -34,14 +39,14 @@ export default function LandingPage() {
   useEffect(() => {
     const ctx = gsap.context(() => {
 
-      /* ── Cursor ── */
+      /* ── Cursor (no delay needed — follows mouse immediately) ── */
       window.addEventListener("mousemove", (e) => {
         gsap.to(cursorRef.current,   { x: e.clientX, y: e.clientY, duration: 0.05 });
         gsap.to(followerRef.current, { x: e.clientX, y: e.clientY, duration: 0.22 });
       });
 
-      /* ── ENTRANCE: timeline ── */
-      const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
+      /* ── ENTRANCE: timeline (starts after 3 s) ── */
+      const tl = gsap.timeline({ defaults: { ease: "expo.out" }, delay: DELAY });
 
       // hero text lines
       tl.from(line1Ref.current, { y: 80, opacity: 0, duration: 1.1 })
@@ -60,7 +65,8 @@ export default function LandingPage() {
                globeRef.current, starRef.current, fireRef.current, zapRef.current],
                { scale: 0, opacity: 0, stagger: 0.08, duration: 0.5, ease: "back.out(2)" }, "-=0.5");
 
-      /* ── CONTINUOUS FLOAT: every emoji/sticker gets its own looping tween ── */
+      /* Helper: how long the entrance timeline takes (rough) so continuous
+         animations start only after the entrance completes + 3 s head-start */
       const floatEl = (el, yAmp, xAmp, rot, dur, delay = 0) => {
         gsap.to(el, {
           y:        `+=${yAmp}`,
@@ -70,7 +76,7 @@ export default function LandingPage() {
           repeat:   -1,
           yoyo:     true,
           ease:     "sine.inOut",
-          delay,
+          delay:    DELAY + delay,   // ← shifted by 3 s
         });
       };
 
@@ -88,17 +94,17 @@ export default function LandingPage() {
       floatEl(loadingRef.current,   8,  10,  6,  3.0, 0.2);
 
       /* ── CONTINUOUS SLOW DRIFT: hero text lines ── */
-      gsap.to(line1Ref.current, { y: "-=8", duration: 4.5, repeat: -1, yoyo: true, ease: "sine.inOut" });
-      gsap.to(line2Ref.current, { y: "+=8", duration: 5.0, repeat: -1, yoyo: true, ease: "sine.inOut", delay: 0.5 });
-      gsap.to(line3Ref.current, { y: "-=6", duration: 4.0, repeat: -1, yoyo: true, ease: "sine.inOut", delay: 1.0 });
+      gsap.to(line1Ref.current, { y: "-=8", duration: 4.5, repeat: -1, yoyo: true, ease: "sine.inOut", delay: DELAY });
+      gsap.to(line2Ref.current, { y: "+=8", duration: 5.0, repeat: -1, yoyo: true, ease: "sine.inOut", delay: DELAY + 0.5 });
+      gsap.to(line3Ref.current, { y: "-=6", duration: 4.0, repeat: -1, yoyo: true, ease: "sine.inOut", delay: DELAY + 1.0 });
 
       /* ── CONTINUOUS: CTA buttons bob ── */
-      gsap.to(ctaRef.current, { y: "-=6", duration: 3.5, repeat: -1, yoyo: true, ease: "sine.inOut", delay: 1 });
+      gsap.to(ctaRef.current, { y: "-=6", duration: 3.5, repeat: -1, yoyo: true, ease: "sine.inOut", delay: DELAY + 1 });
 
       /* ── CONTINUOUS: orbs drift ── */
-      gsap.to(orbOrangeRef.current, { x: 60,  y: 40,  duration: 9,  repeat: -1, yoyo: true, ease: "sine.inOut" });
-      gsap.to(orbPinkRef.current,   { x: -50, y: -30, duration: 11, repeat: -1, yoyo: true, ease: "sine.inOut", delay: 2 });
-      gsap.to(orbPurpleRef.current, { x: 40,  y: -50, duration: 7,  repeat: -1, yoyo: true, ease: "sine.inOut", delay: 1 });
+      gsap.to(orbOrangeRef.current, { x: 60,  y: 40,  duration: 9,  repeat: -1, yoyo: true, ease: "sine.inOut", delay: DELAY });
+      gsap.to(orbPinkRef.current,   { x: -50, y: -30, duration: 11, repeat: -1, yoyo: true, ease: "sine.inOut", delay: DELAY + 2 });
+      gsap.to(orbPurpleRef.current, { x: 40,  y: -50, duration: 7,  repeat: -1, yoyo: true, ease: "sine.inOut", delay: DELAY + 1 });
 
       /* ── CONTINUOUS: "LOADING" border pulse ── */
       gsap.to(loadingRef.current, {
@@ -107,6 +113,7 @@ export default function LandingPage() {
         repeat: -1,
         yoyo: true,
         ease: "sine.inOut",
+        delay: DELAY,
       });
 
       /* ── CONTINUOUS: word-one color breathe ── */
@@ -116,6 +123,7 @@ export default function LandingPage() {
         repeat: -1,
         yoyo: true,
         ease: "sine.inOut",
+        delay: DELAY,
       });
 
       /* ── CONTINUOUS: guitar spin nudge ── */
@@ -125,6 +133,7 @@ export default function LandingPage() {
         repeat: -1,
         yoyo: true,
         ease: "power1.inOut",
+        delay: DELAY,
       });
 
       /* ── CONTINUOUS: rocket tilt ── */
@@ -134,6 +143,7 @@ export default function LandingPage() {
         repeat: -1,
         yoyo: true,
         ease: "power1.inOut",
+        delay: DELAY,
       });
 
       /* ── CONTINUOUS: star pulse scale ── */
@@ -143,6 +153,7 @@ export default function LandingPage() {
         repeat: -1,
         yoyo: true,
         ease: "sine.inOut",
+        delay: DELAY,
       });
 
       /* ── CONTINUOUS: zap flicker opacity ── */
@@ -152,6 +163,7 @@ export default function LandingPage() {
         repeat: -1,
         yoyo: true,
         ease: "steps(1)",
+        delay: DELAY,
       });
 
     }, wrapperRef);
@@ -207,8 +219,9 @@ export default function LandingPage() {
           </p>
 
           <div className="cta-group" ref={ctaRef}>
-            <button className="btn-register">Register Now</button>
-            <button className="btn-explore">Explore Events</button>
+            <button className="btn-explore" onClick={() => navigate("/")}>
+              Explore Events
+            </button>
           </div>
         </div>
       </div>

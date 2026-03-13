@@ -88,7 +88,7 @@ body {
   font-size: clamp(44px, 9vw, 130px);
   letter-spacing: 1px;
   color: var(--text-main);
-  line-height: 0.80;
+  line-height: 1.2;
   will-change: transform;
 }
 
